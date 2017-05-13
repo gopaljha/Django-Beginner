@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Profile - Python Development Tutorials {% endblock %}
+
+{% block body %}
+
+<h2>Profile page</h2>
+<p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+<p><strong>First Name:</strong> {{ user.first_name }}</p>
+<p><strong>Last Name:</strong>  {{ user.last_name }}</p>
+<p><strong>Username:</strong> {{ user.username }} </p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Mobile:</strong> {{ user.userprofile.phone }}</p>
+<p><strong>Website:</strong> {{ user.userprofile.website }}</p>
+<p><strong>City:</strong> {{ user.userprofile.city }}</p>
+<p><strong>Description:</strong> {{ user.userprofile.description }}</p>
+<img src="{{ user.userprofile.image }}" alt="">
+{% endblock %}

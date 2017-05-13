@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Register - Python Development Tutorials {% endblock %}
+
+{% block body %}
+
+<div class="modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Register Your Account</h1><br>
+            <form method="post" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" id="loginButton" name="loginButton" class="login loginmodal-submit" value="Register">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
